@@ -54,10 +54,16 @@ const ContactDetail=()=>{
               />
             </FloatingLabel>
           </Form.Group>
-           <br></br>
-          <Button variant="primary" type="submit" style={{background: "#FFB800",
-    color: "black",alignText:"center"
-  }}>
+          <br></br>
+          <Button
+            variant="primary"
+            type="submit"
+            style={{
+              background: "rgb(60 174 185)",
+              color: "black",
+              alignText: "center",
+            }}
+          >
             Send Message
           </Button>
         </Form>
@@ -67,7 +73,9 @@ const ContactDetail=()=>{
 const LetsTalk=()=>{
     return (
       <div>
-        <h2 style={{ textAlign: "center", color: "#FFB800" }}>Let's Talk</h2>
+        <h2 style={{ textAlign: "center", color: "  rgb(60 174 185)" }}>
+          Let's Talk
+        </h2>
         <p>Hello Everyone 👋</p>
         <p>
           I'm here to help and answer any question you might have.We look
@@ -79,7 +87,9 @@ const LetsTalk=()=>{
           &nbsp;&nbsp;
           <a href="tel:+919755478801">📱</a>
           <br></br>
-          <a href="tel:+919755478801">9755478801</a>
+          <a style={{ color: "white",textDecoration:"none" }}  href="tel:+919755478801">
+            9755478801
+          </a>
         </p>
         <div className={styles.socialMediaDiv}>
           <span className={styles.socailMediaIcon}>
@@ -154,7 +164,7 @@ const LetsTalk=()=>{
               backgroundColor="rgba(51,175,198,0.97)"
               iconSize="3"
               roundness="50%"
-              href="tel:9755478801"
+              url="tel:+919755478801"
               size="65"
             />
           </span>

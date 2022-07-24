@@ -155,29 +155,27 @@ const Interset=()=>{
       >
         <h1>Interests</h1>
         <span>What I Like</span>
-        <Container
-          style={{ padding: "15px", textAlign: "center" }}
-        >
+        <Container style={{ padding: "15px", textAlign: "center" }}>
           <Row>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaMountain size="8rem" />
                 <h5>Mountain Climbing</h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaPlane size="8rem" />
                 <h5>Travel</h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaBicycle size="8rem" />
                 <h5>Biking</h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaTv size="8rem" />
                 <h5>
@@ -185,19 +183,18 @@ const Interset=()=>{
                 </h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <GiTennisRacket size="8rem" />
                 <h5>Badminton </h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <GiConsoleController size="8rem" />
                 <h5>Gaming </h5>
               </div>
             </Col>
-           
           </Row>
         </Container>
       </div>

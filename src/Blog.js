@@ -26,7 +26,6 @@ const Blog=()=>{
 }
 const Work=()=>{
   return (
- 
     <div>
       <h1 style={{ textAlign: "center", color: "aliceblue" }}>
         Experience and Work
@@ -65,8 +64,9 @@ const Work=()=>{
                 <h3 className="vertical-timeline-element-title">One Stop</h3>
                 <h4>Intenship</h4>
                 <p>
-                  In the Intenship,I'm work on Fashion Design System to predict,
-                  visualize ,and lot's new thing learned during the Intenship
+                  In the Internship, I'm working on Fashion Design System to
+                  predict, visualize, and lot's new things learned during the
+                  Internship
                 </p>
                 <OneStopDownload />
               </VerticalTimelineElement>
@@ -79,9 +79,9 @@ const Work=()=>{
                 <h3 className="vertical-timeline-element-title">One Stop</h3>
 
                 <p>
-                  It is basically training Period,Initially i dont know about
-                  Machine lering and Deep learing,during the training they teach
-                  me alot and make 3 Project on Deep leaning and Machine
+                  It is a training Period, Initially, I don't know about Machine
+                  learning and Deep learning, during the training they teach me
+                  a lot and make 3 Projects on Deep learning and Machine
                   Learning
                 </p>
                 <OneStopTraing />
@@ -95,8 +95,8 @@ const Work=()=>{
                 <h3 className="vertical-timeline-element-title">Two wait's</h3>
                 <h3>Intenship web Development</h3>
                 <p>
-                  It is one month Intenship ,during this Period we complete 4
-                  Task and learn About Web-development
+                  This is a one month internship, during this period we carry
+                  out 4 tasks and learn more about web development.
                 </p>
                 <WebDevlopButton />
               </VerticalTimelineElement>
@@ -104,9 +104,6 @@ const Work=()=>{
           </Col>
         </Row>
       </Container>
-      
- 
- 
     </div>
   );
 }

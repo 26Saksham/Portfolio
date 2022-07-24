@@ -35,6 +35,8 @@ import "@coreui/coreui/dist/css/coreui.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@mui/material";
+import {Link } from "react-router-dom";
+import { FcAbout } from "react-icons/fc";
 
 function App() {
  
@@ -81,12 +83,12 @@ return (
           <COffcanvasBody>
             <CNavbarNav>
               <CNavItem>
-                <CNavLink href="#" active>
+                <CNavLink href="#" to={Contact}  active>
                   Home
                 </CNavLink>
               </CNavItem>
               <CNavItem>
-                <CNavLink href="#">About</CNavLink>
+                <CNavLink to={About}>About</CNavLink>
               </CNavItem>
               <CDropdown variant="nav-item" popper={false}>
                 <CDropdownToggle color="secondary">Work</CDropdownToggle>

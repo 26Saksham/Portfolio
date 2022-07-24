@@ -36,6 +36,7 @@ const Work =()=> {
   return (
     <div style={{ background: "#5c8589", color: "white", padding: "50px" }}>
       <h1 style={{ textAlign: "center" }}>Project Exhibition</h1>
+     
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<AllItem />}></Route>

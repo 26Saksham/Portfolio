@@ -34,8 +34,11 @@ const responsive = {
 const Work =()=> {
 
   return (
-    <div style={{ background: "#5c8589", color: "white", padding: "50px" }}>
-      <h1 style={{ textAlign: "center" }}>Project Exhibition</h1>
+    <div
+      style={{ background: "rgb(57 72 103)", color: "white", padding: "50px" }}
+    >
+      <h1 style={{ textAlign: "center" }}>Project Exhibition </h1>
+
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<AllItem />}></Route>
@@ -49,19 +52,21 @@ const Work =()=> {
   }
 const NavBarItem=()=>{
   return (
-    <div style={{ textAlign: "center", margin: "4px" }}>
-      <Link className={styles.navbaritemdiv} to="/">
-        ALL
-      </Link>
-      <Link className={styles.navbaritemdiv} to="/webd">
-        Web-Development
-      </Link>
-      <Link className={styles.navbaritemdiv} to="/alml">
-        AI-ML
-      </Link>
-      <Link className={styles.navbaritemdiv} to="/cpdsa">
-        Competitive Programming
-      </Link>
+    <div>
+      <div style={{ textAlign: "center", margin: "4px" }}>
+        <Link className={styles.navbaritemdiv} to="/">
+          ALL
+        </Link>
+        <Link className={styles.navbaritemdiv} to="/webd">
+          Web-Development
+        </Link>
+        <Link className={styles.navbaritemdiv} to="/alml">
+          AI-ML
+        </Link>
+        <Link className={styles.navbaritemdiv} to="/cpdsa">
+          Competitive Programming
+        </Link>
+      </div>
     </div>
   );
 }
@@ -84,7 +89,7 @@ const AllItem = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -104,7 +109,7 @@ const AllItem = () => {
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
                   style={{
-                    backgroundColor: "rgb(0 71 76)",
+                    backgroundColor: "rgb(20 39 78)",
                     border: "#FFB800",
                   }}
                   href="https://github.com/sonejamohit/cluboCMS"
@@ -120,7 +125,7 @@ const AllItem = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -134,13 +139,13 @@ const AllItem = () => {
                   src={AboutImages("./leetcode.jpg")}
                 />
                 <CCardText>
-                  <b> 200+ Question Solved </b>
+                  <b> 450+ Question Solved </b>
                   <p>You can check Now.</p>
                 </CCardText>
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://leetcode.com/Shaksham26/"
                 >
                   View Project
@@ -154,7 +159,7 @@ const AllItem = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -174,7 +179,7 @@ const AllItem = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://github.com/26Saksham/microsoft"
                 >
                   View Project
@@ -189,7 +194,7 @@ const AllItem = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -212,7 +217,7 @@ const AllItem = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://github.com/26Saksham/MACHINE-LEARNIG/blob/main/House%20%20price%20prediction.ipynb"
                 >
                   View Project
@@ -225,7 +230,7 @@ const AllItem = () => {
             <CCard
               style={{
                 width: "18rem",
-                color: "rgb(0 71 76)",
+                color: "rgb(20 39 78)",
                 fontWeight: "bold",
               }}
             >
@@ -233,7 +238,7 @@ const AllItem = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -256,7 +261,7 @@ const AllItem = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://github.com/hemang5902/Sports_club-management"
                 >
                   View Project
@@ -269,7 +274,7 @@ const AllItem = () => {
             <CCard
               style={{
                 width: "18rem",
-                color: "rgb(0 71 76)",
+                color: "rgb(20 39 78)",
                 fontWeight: "bold",
               }}
             >
@@ -277,7 +282,7 @@ const AllItem = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -297,7 +302,7 @@ const AllItem = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="#"
                 >
                   View Project
@@ -328,7 +333,7 @@ const WebDevelopment = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -347,7 +352,7 @@ const WebDevelopment = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://github.com/sonejamohit/cluboCMS"
                 >
                   View Project
@@ -362,7 +367,7 @@ const WebDevelopment = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -382,7 +387,7 @@ const WebDevelopment = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://github.com/26Saksham/microsoft"
                 >
                   View Project
@@ -397,7 +402,7 @@ const WebDevelopment = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -420,7 +425,7 @@ const WebDevelopment = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://github.com/hemang5902/Sports_club-management"
                 >
                   View Project
@@ -447,7 +452,7 @@ const AlML = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -470,7 +475,7 @@ const AlML = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://github.com/26Saksham/MACHINE-LEARNIG/blob/main/House%20%20price%20prediction.ipynb"
                 >
                   View Project
@@ -485,7 +490,7 @@ const AlML = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -505,7 +510,7 @@ const AlML = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="#"
                 >
                   View Project
@@ -531,7 +536,7 @@ const CPDSA = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -545,13 +550,13 @@ const CPDSA = () => {
                   src={AboutImages("./leetcode.jpg")}
                 />
                 <CCardText>
-                  <b> 200+ Question Solved </b>
+                  <b> 1600+ rating </b>
                   <p>You can check Now.</p>
                 </CCardText>
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://leetcode.com/Shaksham26/"
                 >
                   View Project
@@ -565,7 +570,7 @@ const CPDSA = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -585,7 +590,7 @@ const CPDSA = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://www.hackerrank.com/shakshamneekhra1?hr_r=1"
                 >
                   View Project
@@ -599,7 +604,7 @@ const CPDSA = () => {
               <CCardHeader
                 style={{
                   textAlign: "center",
-                  color: "rgb(0 71 76)",
+                  color: "rgb(20 39 78)",
                   fontWeight: "bold",
                 }}
               >
@@ -619,7 +624,7 @@ const CPDSA = () => {
               </CCardBody>
               <CCardFooter style={{ textAlign: "center" }}>
                 <CButton
-                  style={{ backgroundColor: "rgb(0 71 76)", border: "#FFB800" }}
+                  style={{ backgroundColor: "rgb(20 39 78)", border: "#FFB800" }}
                   href="https://www.codechef.com/users/shaksham26"
                 >
                   View Project

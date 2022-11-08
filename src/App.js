@@ -8,7 +8,7 @@ import Education from './Education.js'
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import backg from './first.jpg'
+import backg from "./background.jpg";
 import Resume from './File/saksham.pdf';
 import { SocialMediaIconsReact } from "social-media-icons-react";
 
@@ -33,14 +33,15 @@ import {
 } from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@mui/material";
+
 
 function App() {
  
    const [visible, setVisible] = React.useState(false)
 return (
-  <div>
+  <div style={{ background: "#14274E" }}>
     <CNavbar
       colorScheme="light"
       className="bg-light"
@@ -50,7 +51,7 @@ return (
       <CContainer
         fluid
         style={{
-          background: "rgb(20 69 72)",
+          background: "#14274e",
           padding: "5px",
           color: "rgb(155 199 192)",
         }}
@@ -61,7 +62,10 @@ return (
           aria-label="Toggle navigation"
           onClick={() => setVisible(!visible)}
           style={{
-            background: "#97c3bd",
+        background: "#ffffff",
+    border: "1px solid #2322b7",
+    "borderRadius": "20px",
+    color: "whitesmoke",
           }}
         />
         <COffcanvas
@@ -81,12 +85,12 @@ return (
           <COffcanvasBody>
             <CNavbarNav>
               <CNavItem>
-                <CNavLink href="#" active>
+                <CNavLink href="#" to={Contact} active>
                   Home
                 </CNavLink>
               </CNavItem>
               <CNavItem>
-                <CNavLink href="#">About</CNavLink>
+                <CNavLink to="/About"></CNavLink>
               </CNavItem>
               <CDropdown variant="nav-item" popper={false}>
                 <CDropdownToggle color="secondary">Work</CDropdownToggle>
@@ -106,7 +110,7 @@ return (
       </CContainer>
     </CNavbar>
     <Home styles={styles} />
-    <About  />
+    <About />
     <Education />
     <Work />
     <Blog />
@@ -120,9 +124,9 @@ const Footer=()=>{
     <div
       style={{
         textAlign: "center",
-        backgroundColor: "rgb(92 133 137)",
+        backgroundColor: "#9BA4B4",
         padding: "15px",
-        color: "white",
+        color: "#14274E",
       }}
     >
       <div className={styles.FooterLinkDiv}>
@@ -141,10 +145,15 @@ const Footer=()=>{
 const Home=({styles})=>{
 return (
   <div
-    style={{ backgroundImage: `url(${backg})`, height: "700px" }}
+    style={{
+      backgroundImage: `url(${backg})`,
+      height: "700px",
+      backgroundSize: "cover",
+      
+    }}
     className={styles.homeBackground}
   >
-    <Container>
+    <Container >
       <Row className={styles.HomeScreenIcon}>
         <Col
           // className={styles.HomeIcon}
@@ -159,7 +168,6 @@ return (
             width: "8.33333333%",
           }}
         >
-          
           <span className={styles.socailMediaIcon}>
             <SocialMediaIconsReact
               className={styles.SocialIcons}
@@ -237,21 +245,48 @@ const ResumeButton=()=>{
   return (
     <div>
       <a
-      style={{"textDecoration": 'none'}}
+        style={{ textDecoration: "none" }}
         href={Resume}
         download="Saksham Resume"
         target="_blank"
       >
-        <Button style={{"border": "1px solid",color:"white",
-        "borderBottomLeftRadius": "11px",
-        "borderBottomStyle": "groove"}} className={styles.resumeButton}>
-          Download Resume
+        <Button
+          style={{
+            border: "1px solid",
+            color: "white",
+            borderBottomStyle: "groove",
+            padding: "15px",
+          }}
+          className={styles.resumeButton}
+        >
+          Download CV
+        </Button>
+      </a>
+      <a
+        style={{ textDecoration: "none" }}
+        href={Resume}
+        download="Saksham Resume"
+        target="_blank"
+      >
+        <Button
+          style={{
+            border: "1px solid",
+            color: "white",
+            // borderBottomLeftRadius: "11px",
+            borderBottomStyle: "groove",
+            padding: "15px",
+            backgroundColor: "rgb(20 39 78)",
+          }}
+          className={styles.letsTalkButton}
+        >
+          Let's Talk
         </Button>
       </a>
       <span className={styles.scrollText}>
-        SCROLL TO DOWN <FontAwesomeIcon icon={faArrowDown} />
+        SCROLL TO DOWN <FontAwesomeIcon icon={faArrowRight} />
       </span>
     </div>
   );
 }
+
 export default App;

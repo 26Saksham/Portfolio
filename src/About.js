@@ -8,13 +8,22 @@ import img from './about.png';
 import Title from "react-vanilla-tilt";
 import Tilt from 'react-vanilla-tilt'
 import Resume from "./File/saksham.pdf";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+
 import { Button } from "@mui/material";
+import SkillsSet from './SkillsSet';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import {FcDownload} from  "react-icons/fc";
+import { FaPython, FaReact, FaNodeJs,FaJs,FaHtml5,FaCss3,FaJsSquare } from "react-icons/fa";
+import {
+
+  faMedal,
+  faLaptop,
+  faLaptopCode
+} from "@fortawesome/free-solid-svg-icons";
 const About=()=>{
 return (
-  <div style={{ background: "rgb(92 134 138)", padding: "50px" }}>
-    <h2 style={{textAlign:"center",color:"white"}}>About</h2>
+  <div style={{ background: "#14274E", padding: "50px" }}>
+    <h2 style={{ textAlign: "center", color: "white" }}>About</h2>
     <Container>
       <Row>
         <Col>
@@ -24,6 +33,9 @@ return (
           <AboutSkills />
         </Col>
       </Row>
+      <Row>
+        <SkillsSet />
+      </Row>
     </Container>
   </div>
 );
@@ -31,42 +43,47 @@ return (
 const AboutSkills=()=>{
     return (
       <div>
-      
-        
-        <h1>Saksham Gupta</h1>
-        <p>
-          Hello I'm Saksham Gupta , web Development , AI - ML , Data Anlaysis
-          and one more skills i have that is Competitive Programming
+        <p className={styles.AboutLine}>
+          Hello I'm Saksham Gupta , Want to pursue my career in Software
+          Development by learning from different phases that I encounter in my
+          life and apply this learning in my coming unforeseen future. Ready to
+          accept challenges and hone my skills every day.Thankyou Everyone!
         </p>
-        <ResumeButton/>
-        <div className="skills">
-          <h1>Skills</h1>
-          <Container>
-            <Row>
-              
-                <Col className={styles.skillset}>C++</Col>
-              
+        <ResumeButton />
+        <Container>
+          <Row>
+            <Col>
+              <div className={styles.aboutDiv}>
+                <div className={styles.aboutIcon}>
+                  <FontAwesomeIcon icon={faMedal} />
+                </div>
+                <div className={styles.aboutHeading}>Experience</div>
+                <div className={styles.aboutBottomLine}>3 Month+</div>
+              </div>
+            </Col>
+            <Col>
+              <div className={styles.aboutDiv}>
+                <div className={styles.aboutIcon}>
+                  <FontAwesomeIcon icon={faLaptop} />
+                </div>
+                <div className={styles.aboutHeading}>Project</div>
+                <div className={styles.aboutBottomLine}>6+ completed</div>
+              </div>
+            </Col>
+            <Col>
+              <div className={styles.aboutDiv}>
+                <div className={styles.aboutIcon}>
+                  <FontAwesomeIcon icon={faLaptopCode} />
+                </div>
+                <div className={styles.aboutHeading}>CP</div>
+                <div className={styles.aboutBottomLine}>2 Year+</div>
+              </div>
+            </Col>
+          </Row>
+       
+        </Container>
 
-              <Col className={styles.skillset}>DSA</Col>
-              <Col className={styles.skillset}>Python</Col>
-            </Row>
-            <Row>
-              <Col className={styles.skillset}>React JS</Col>
-              <Col className={styles.skillset}>Node JS</Col>
-              <Col className={styles.skillset}>JQuery</Col>
-            </Row>
-            <Row>
-              <Col className={styles.skillset}>HTML</Col>
-              <Col className={styles.skillset}>CSS</Col>
-              <Col className={styles.skillset}>JAVASCRIPT</Col>
-            </Row>
-            <Row>
-              <Col className={styles.skillset}>Deep leaning</Col>
-              <Col className={styles.skillset}> Machine Learning</Col>
-              <Col className={styles.skillset}>DataBase</Col>
-            </Row>
-          </Container>
-        </div>
+        <div className="skills"></div>
       </div>
     );
 }
@@ -83,12 +100,13 @@ const ResumeButton = () => {
           style={{
             border: "1px solid",
             color: "white",
-            borderBottomLeftRadius: "11px",
             borderBottomStyle: "groove",
-            padding: "4px",
+            margin: "10px",
+            left:"10px",
+            padding: "10px",
           }}
         >
-          Download Resume <FcDownload size="20px"/>
+          Download CV <FcDownload size="20px" />
         </Button>
       </a>
     </div>
@@ -105,4 +123,5 @@ const AboutPhoto=()=>{
       </div>
     );
 }
+
 export default About;

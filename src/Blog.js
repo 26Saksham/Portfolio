@@ -17,7 +17,7 @@ const Blog=()=>{
     
     return (
       <div>
-        <div style={{ background: "rgb(22 81 85)" }}>
+        <div style={{ background: "#394867" }}>
           <Work />
         </div>
         <ToolUsed />
@@ -26,77 +26,104 @@ const Blog=()=>{
 }
 const Work=()=>{
   return (
- 
     <div>
-      <h1 style={{ textAlign: "center", color: "aliceblue" }}>
+      <h1 style={{ textAlign: "center", color: "#D7C49EFF" }}>
         Experience and Work
       </h1>
       <Container>
-        <Row style={{ color: "black" }}>
+        <Row style={{ color: "white" }}>
           <Col>
             <VerticalTimeline>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="2022 - present"
-                iconStyle={{ background: "rgb(12 141 155)", color: "white" }}
+                iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaBook />}
               >
-                <h3 className="vertical-timeline-element-title">
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ color: "#343148FF" }}
+                >
                   E-CELL Tech Club
                 </h3>
-                <p>Core-member of Event and PR Team</p>
+                <p style={{ color: "#343148FF" }}>
+                  Core-member of Event and PR Team
+                </p>
               </VerticalTimelineElement>
 
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="2022 - present"
-                iconStyle={{ background: "rgb(12 141 155)", color: "#fff" }}
+                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaLayerGroup />}
               >
-                <h3 className="vertical-timeline-element-title">ACM</h3>
-                <p>Member of ACM Family</p>
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ color: "#343148FF" }}
+                >
+                  ACM
+                </h3>
+                <p style={{ color: "#343148FF" }}>Member of ACM Family</p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="April 2022 - june 2022"
-                iconStyle={{ background: "rgb(12 141 155)", color: "#fff" }}
+                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaPython />}
               >
-                <h3 className="vertical-timeline-element-title">One Stop</h3>
-                <h4>Intenship</h4>
-                <p>
-                  In the Intenship,I'm work on Fashion Design System to predict,
-                  visualize ,and lot's new thing learned during the Intenship
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ color: "#343148FF" }}
+                >
+                  One Stop
+                </h3>
+                <h4 style={{ color: "#343148FF" }}>Intenship</h4>
+                <p style={{ color: "#343148FF" }}>
+                  In the Internship, I'm working on Fashion Design System to
+                  predict, visualize, and lot's new things learned during the
+                  Internship
                 </p>
                 <OneStopDownload />
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="june 2021 - jan 2022"
-                iconStyle={{ background: "rgb(12 141 155)", color: "#fff" }}
+                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaPython />}
               >
-                <h3 className="vertical-timeline-element-title">One Stop</h3>
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ color: "#343148FF" }}
+                >
+                  One Stop
+                </h3>
 
-                <p>
-                  It is basically training Period,Initially i dont know about
-                  Machine lering and Deep learing,during the training they teach
-                  me alot and make 3 Project on Deep leaning and Machine
+                <p style={{ color: "#343148FF" }}>
+                  It is a training Period, Initially, I don't know about Machine
+                  learning and Deep learning, during the training they teach me
+                  a lot and make 3 Projects on Deep learning and Machine
                   Learning
                 </p>
                 <OneStopTraing />
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="june 2021 - jan 2022"
-                iconStyle={{ background: "rgb(12 141 155)", color: "#fff" }}
+                date="june 2021 - june 2021"
+                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaCss3 />}
               >
-                <h3 className="vertical-timeline-element-title">Two wait's</h3>
-                <h3>Intenship web Development</h3>
-                <p>
-                  It is one month Intenship ,during this Period we complete 4
-                  Task and learn About Web-development
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ color: "#343148FF" }}
+                >
+                  Two wait's
+                </h3>
+                <h3 style={{ color: "#343148FF" }}>
+                  Intenship web Development
+                </h3>
+                <p style={{ color: "#343148FF" }}>
+                  This is a one month internship, during this period we carry
+                  out 4 tasks and learn more about web development.
                 </p>
                 <WebDevlopButton />
               </VerticalTimelineElement>
@@ -104,18 +131,23 @@ const Work=()=>{
           </Col>
         </Row>
       </Container>
-      
- 
- 
     </div>
   );
 }
 const ToolUsed=()=>{
   return (
-    <div style={{ textAlign: "center", background: "#5c8589",color:"black",padding:"25px" }}>
-      <h1>Tool Used</h1>
-      Operating system: Windows <FaWindows/><br></br>
-      IDE: VsCode <FaCode/> for Web Development and Competitive Coding<br></br>
+    <div
+      style={{
+        textAlign: "center",
+        background: "#394867",
+        color: "white",
+        padding: "25px",
+      }}
+    >
+      <h1 style={{ color: "#D7C49EFF" }}>Tool Used</h1>
+      Operating system: Windows <FaWindows />
+      <br></br>
+      IDE: VsCode <FaCode /> for Web Development and Competitive Coding<br></br>
       ML and Deep learning: Juputer Notebook and Google colab<br></br>
     </div>
   );

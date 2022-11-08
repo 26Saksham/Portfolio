@@ -7,62 +7,78 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { FaBatteryEmpty, FaBicycle, FaBook,FaLanguage,FaMountain,FaPen ,FaPlane,FaSchool, FaTv} from "react-icons/fa";
+import { FaBicycle, FaBook,FaLanguage,FaMountain,FaPen ,FaPlane,FaSchool, FaTv} from "react-icons/fa";
 import ProgressBar from "@ramonak/react-progress-bar";
-import { CircularProgress } from '@mui/material';
 import styles from './style.module.css';
 import { GiTennisRacket, GiConsoleController   } from "react-icons/gi";
 const Education=()=>{
     return (
       <div>
-        <div style={{ background: "#165155", color: "black" }}>
+        <div
+          style={{
+            background: "#14274E",
+            color: "white",
+          
+          }}
+        
+        >
           <h1 style={{ textAlign: "center" }}>Education</h1>
           <Container>
             <Row>
-              <Col style={{ color: "black" }}>
+              <Col style={{ color: "white" }}>
                 <VerticalTimeline>
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="2020 - present"
                     iconStyle={{
-                      background: "rgb(12 141 155)",
+                      background: "rgb(17 45 78)",
                       color: "white",
                     }}
                     icon={<FaBook />}
                   >
-                    <h3 className="vertical-timeline-element-title">
+                    <h3
+                      className="vertical-timeline-element-title"
+                      style={{ color: "#112d4e" }}
+                    >
                       BE, Institute of technology in Indore, Madhya Pradesh
                     </h3>
-                    <h4 className="vertical-timeline-element-subtitle">
+                    <h4
+                      className="vertical-timeline-element-subtitle"
+                      style={{ color: "#112d4e" }}
+                    >
                       Currently in 3rd Year
                     </h4>
-                    <p>
-                      1st year Score - 86% <br></br>2nd Year Score - 84%
-                    </p>
+                    <p style={{ color: "#112d4e" }}>Current CGPA - 8.5</p>
                   </VerticalTimelineElement>
 
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="2018 - 2019"
-                    iconStyle={{ background: "rgb(12 141 155)", color: "#fff" }}
+                    iconStyle={{ background: "rgb(17 45 78)", color: "#fff" }}
                     icon={<FaSchool />}
                   >
-                    <h3 className="vertical-timeline-element-title">
+                    <h3
+                      className="vertical-timeline-element-title"
+                      style={{ color: "#112d4e" }}
+                    >
                       High secondary, Ideal Cambridge Higher Secondary School
                     </h3>
-                    <p>Score - 78%</p>
+                    <p style={{ color: "#112d4e" }}>Score - 78%</p>
                   </VerticalTimelineElement>
                   <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="2016 - 2017"
-                    iconStyle={{ background: "rgb(12 141 155)", color: "#fff" }}
+                    iconStyle={{ background: "rgb(17 45 78)", color: "#fff" }}
                     icon={<FaPen />}
                   >
-                    <h3 className="vertical-timeline-element-title">
+                    <h3
+                      className="vertical-timeline-element-title"
+                      style={{ color: "#112d4e" }}
+                    >
                       Secondary School, The Prime Academy
                     </h3>
 
-                    <p>
+                    <p style={{ color: "#112d4e" }}>
                       Head of Class<br></br>
                       Score - 81.3%
                     </p>
@@ -73,15 +89,15 @@ const Education=()=>{
           </Container>
         </div>
         <Language />
-        <Interset/>
+        <Interset />
       </div>
     );
 }
 const Language = () => {
   return (
-    <div style={{ background: "#557b7f", color: "black" }}>
+    <div style={{ background: "rgb(20, 39, 78)", color: "white" }}>
       <h1
-        style={{ textAlign: "center", background: "#557b7f", color: "black" }}
+        style={{ textAlign: "center" }}
       >
         Language <FaLanguage />
       </h1>
@@ -95,8 +111,8 @@ const Language = () => {
             <Col>
               <ProgressBar
                 customLabel="HINDI"
-                completed="80"
-                bgColor="#3a888d"
+                completed="90"
+                bgColor="rgb(57 72 103)"
                 labelAlignment="center"
                 animateOnRender="true"
                 initCompletedOnAnimation="0"
@@ -112,8 +128,8 @@ const Language = () => {
             <Col>
               <ProgressBar
                 customLabel="English"
-                completed="65"
-                bgColor="#3a888d"
+                completed="75"
+                bgColor="rgb(57 72 103)"
                 labelAlignment="center"
                 animateOnRender="true"
                 initCompletedOnAnimation="0"
@@ -129,8 +145,8 @@ const Language = () => {
             <Col>
               <ProgressBar
                 customLabel="Bundelkhandi"
-                completed="80"
-                bgColor="#3a888d"
+                completed="90"
+                bgColor="rgb(57 72 103)"
                 labelAlignment="center"
                 animateOnRender="true"
                 initCompletedOnAnimation="0"
@@ -148,36 +164,34 @@ const Interset=()=>{
       <div
         style={{
           textAlign: "center",
-          background: "#165155",
-          color: "black",
+          background: "rgb(20, 39, 78)",
+          color: "white",
           padding: "4px",
         }}
       >
         <h1>Interests</h1>
         <span>What I Like</span>
-        <Container
-          style={{ padding: "15px", textAlign: "center" }}
-        >
+        <Container style={{ padding: "15px", textAlign: "center" }}>
           <Row>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaMountain size="8rem" />
                 <h5>Mountain Climbing</h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaPlane size="8rem" />
                 <h5>Travel</h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaBicycle size="8rem" />
                 <h5>Biking</h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <FaTv size="8rem" />
                 <h5>
@@ -185,19 +199,18 @@ const Interset=()=>{
                 </h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <GiTennisRacket size="8rem" />
                 <h5>Badminton </h5>
               </div>
             </Col>
-            <Col>
+            <Col className={styles.IntersetDiv}>
               <div className={styles.IntersetCard}>
                 <GiConsoleController size="8rem" />
                 <h5>Gaming </h5>
               </div>
             </Col>
-           
           </Row>
         </Container>
       </div>

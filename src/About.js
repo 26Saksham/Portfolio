@@ -13,7 +13,7 @@ import { Button } from "@mui/material";
 import SkillsSet from './SkillsSet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import {FcDownload} from  "react-icons/fc";
-import { FaPython, FaReact, FaNodeJs,FaJs,FaHtml5,FaCss3,FaJsSquare } from "react-icons/fa";
+import { FaPython, FaReact, FaNodeJs,FaJs,FaHtml5,FaCss3,FaJsSquare, FaAlignLeft, FaArrowLeft, FaArrowRight, FaArrowDown } from "react-icons/fa";
 import {
 
   faMedal,
@@ -23,7 +23,8 @@ import {
 const About=()=>{
 return (
   <div style={{ background: "#14274E", padding: "50px" }}>
-    <h2 style={{ textAlign: "center", color: "white" }}>About</h2>
+    <h2 style={{ textAlign: "center", color: "white" }}>About <FaArrowDown/> </h2>
+  
     <Container>
       <Row>
         <Col>
@@ -53,7 +54,7 @@ const AboutSkills=()=>{
         <Container>
           <Row>
             <Col>
-              <div className={styles.aboutDiv}>
+              <div className={styles.aboutDiv} id={styles.experience}>
                 <div className={styles.aboutIcon}>
                   <FontAwesomeIcon icon={faMedal} />
                 </div>
@@ -71,7 +72,7 @@ const AboutSkills=()=>{
               </div>
             </Col>
             <Col>
-              <div className={styles.aboutDiv}>
+              <div className={styles.aboutDiv} id={styles.computer}>
                 <div className={styles.aboutIcon}>
                   <FontAwesomeIcon icon={faLaptopCode} />
                 </div>
@@ -80,7 +81,6 @@ const AboutSkills=()=>{
               </div>
             </Col>
           </Row>
-       
         </Container>
 
         <div className="skills"></div>

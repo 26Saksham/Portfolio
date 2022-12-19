@@ -1,0 +1,61 @@
+    <CNavbar
+        colorScheme="light"
+        className="bg-light"
+        expand="xxl"
+        style={{ padding: "0px" }}
+      >
+        <CContainer
+          fluid
+          style={{
+            background: "#14274e",
+            padding: "5px",
+            color: "rgb(155 199 192)",
+          }}
+        >
+          <log>Saksham Gupta</log>
+          <CNavbarToggler
+            aria-controls="offcanvasNavbar2"
+            aria-label="Toggle navigation"
+            onClick={() => setVisible(!visible)}
+            style={{
+              background: "#ffffff",
+              border: "1px solid #2322b7",
+              borderRadius: "20px",
+              color: "whitesmoke",
+            }}
+          />
+          <COffcanvas
+            id="offcanvasNavbar2"
+            placement="end"
+            portal={false}
+            visible={visible}
+            onHide={() => setVisible(false)}
+          >
+            <COffcanvasHeader>
+              <COffcanvasTitle>Saksham Gupta</COffcanvasTitle>
+              <CCloseButton
+                className="text-reset"
+                onClick={() => setVisible(false)}
+              />
+            </COffcanvasHeader>
+            <COffcanvasBody>
+              <CNavbarNav>
+                <CNavItem>{/* <Link to="/">Home</Link> */}</CNavItem>
+                {/* <CNavItem><Link to="/about">About</Link></CNavItem> */}
+                <CDropdown variant="nav-item" popper={false}>
+                  <CDropdownToggle color="secondary">Work</CDropdownToggle>
+                  <CDropdownMenu>
+                    <CDropdownItem href="#">Web - Development</CDropdownItem>
+                    <CDropdownItem href="#">AI-ML</CDropdownItem>
+                    <CDropdownDivider />
+                    <CDropdownItem href="#">Competitive Coding</CDropdownItem>
+                  </CDropdownMenu>
+                </CDropdown>
+                <CNavItem>
+                  <CNavLink href="#">Contact</CNavLink>
+                </CNavItem>
+              </CNavbarNav>
+            </COffcanvasBody>
+          </COffcanvas>
+        </CContainer>
+      </CNavbar>

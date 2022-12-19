@@ -94,21 +94,21 @@ background-color: "#D8D8D8";
 }
 @keyframes example {
     0%{
-      left: -200px;
+   
       opacity: 0.3;
-      transform: rotate(90deg);
+
     }
 
     50% {
-       left:100px;
+     
        opacity: 0.6;
-       transform: translateX(50px);
+       /* transform: translateX(50px); */
     }
 
 
     100% {
         
-        left: 0px;
+        /* left: 0px; */
             opacity: 1;
     }
 }
@@ -223,6 +223,8 @@ font-weight: bolder;
 .navItemHeadings{
     text-align: center;
    text-size-adjust:inherit;
+   padding: 10px;
+   margin: 10px;
 }
 
 @media screen and (max-width: 625px) {
@@ -334,15 +336,18 @@ display: contents;
       
          background-color:rgb(20 39 78);
 }
-@media screen and (max-width: 720px) {
+
+@media screen and (max-width: 863px) {
 .scrollText{
-    font-size: small;
-    position: relative;
-bottom: -35rem;
-    left: -61px;
-    animation: none;
+
+    display: none;
+}
+.ResumeButtonDiv{
+    display: contents;
 }
 }
+
+
 
 .IntersetCard {
     color:white;
@@ -439,4 +444,145 @@ padding: 8px;
     border-radius: 8px;
     margin: 5px;
     color:white
+}
+@media screen and (max-width: 400px) {
+    .letsTalkButton {
+        display: none;
+    }
+}
+@media screen and (max-width: 418px) {
+   
+    #experience{
+        height: 11rem;
+            padding: 11px;
+    }
+}
+@media screen and (max-width: 396px) {
+    #computer {
+        height: 11rem;
+        
+    }
+}
+.navbaritemHome{
+padding: 10px;
+    margin: 4px;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font: bold;
+    text-decoration: double;
+    font-size: xx-large;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #06032e;
+
+}
+
+@media screen and (max-width: 1500px) {
+  
+
+    .NavbarDiv {
+       
+            display: "flex";
+            bottom: "5%";
+            left: "34%";
+
+    
+            padding: "7px";
+            backdrop-filter: "blur(20px)";
+            border-radius: "100px";
+
+    }
+}
+@media screen and (max-width: 1000px) {
+.navbaritemHome{
+    font-size: large;
+}
+.NavbarDiv{
+    left:25%;
+
+}
+}
+@media screen and (max-width: 832px) {
+.navbaritemHome {
+        font-size:medium;
+    }
+    .NavbarDiv{
+            position: fixed;
+                border: 1px solid;
+                bottom: 12%;
+                padding: 17px;
+                border-radius: 1000px;
+                backdrop-filter: blur(20px);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbaritemHome {
+        font-size: smaller;
+       margin: 8px;
+       padding: 4px;
+    }
+                 .NavbarDiv {
+                     position: fixed;
+                     border: 1px solid;
+                     bottom: 4%;
+                     justify-content: center;
+                     padding: 17px;
+                    width: 80%;
+                     border-radius: 1000px;
+                     backdrop-filter: blur(20px);
+                     left: 8%;
+                 }
+}
+
+/* here */
+
+.NavbarDiv {
+background: transparent;
+    position: fixed;
+    left: 34%;
+    bottom: 12%;
+    border: 1px solid;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 100px;
+    z-index: 4;
+}
+.messageSend{
+        width: fit-content;
+            color: lightseagreen;
+            position: relative;
+            right: -39%;
+          
+            top: inherit;
+            top: -30px;
+}
+.messageError{
+    width: fit-content;
+        color: rgb(231, 50, 43);
+        position: relative;
+        right: -39%;
+    font-size: large;
+        top: inherit;
+        top: -30px;
+}
+@media screen and (max-width: 457px) {
+    .navbaritemHome {
+        font-size: smaller;
+        margin: 6px;
+        padding: 0px;
+    }
+
+    .NavbarDiv {
+        position: fixed;
+left:5ch;
+        border: 1px solid;
+        bottom: 4%;
+        justify-content: center;
+        padding: 17px;
+        width: 80%;
+        border-radius: 1000px;
+        backdrop-filter: blur(20px);
+
+    }
 }

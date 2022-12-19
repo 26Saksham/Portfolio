@@ -8,23 +8,25 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { FaBook,FaCertificate,FaCode,FaCss3, FaLayerGroup,FaPython, FaWindows} from "react-icons/fa";
+import { FaBook,FaCertificate,FaCode,FaCodepen,FaCss3, FaDownload, FaLayerGroup,FaPython, FaWindows} from "react-icons/fa";
 import Button from '@mui/material/Button';
 import Intenship from './File/intenship.pdf';
 import Project from './File/project.pdf';
 import WebD from './File/webD.pdf';
+import Work from './Work.js';
 const Blog=()=>{
     
     return (
       <div>
+   
         <div style={{ background: "#394867" }}>
-          <Work />
+          <Experience />
         </div>
         <ToolUsed />
       </div>
     );
 }
-const Work=()=>{
+const Experience = () => {
   return (
     <div>
       <h1 style={{ textAlign: "center", color: "#D7C49EFF" }}>
@@ -36,39 +38,26 @@ const Work=()=>{
             <VerticalTimeline>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2022 - present"
+                date="Aug 2022 - Nov 2022"
                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
-                icon={<FaBook />}
+                icon={<FaCodepen />}
               >
                 <h3
                   className="vertical-timeline-element-title"
                   style={{ color: "#343148FF" }}
                 >
-                  E-CELL Tech Club
+                  JMD Studio
                 </h3>
                 <p style={{ color: "#343148FF" }}>
-                  Core-member of Event and PR Team
+                  I'm working as a backend team member, working on two major
+                  projects , mainly working on build API and bug solving.
                 </p>
               </VerticalTimelineElement>
 
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2022 - present"
-                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
-                icon={<FaLayerGroup />}
-              >
-                <h3
-                  className="vertical-timeline-element-title"
-                  style={{ color: "#343148FF" }}
-                >
-                  ACM
-                </h3>
-                <p style={{ color: "#343148FF" }}>Member of ACM Family</p>
-              </VerticalTimelineElement>
-              <VerticalTimelineElement
-                className="vertical-timeline-element--work"
                 date="April 2022 - june 2022"
-                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
+                iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaPython />}
               >
                 <h3
@@ -88,7 +77,7 @@ const Work=()=>{
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="june 2021 - jan 2022"
-                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
+                iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaPython />}
               >
                 <h3
@@ -109,7 +98,7 @@ const Work=()=>{
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="june 2021 - june 2021"
-                 iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
+                iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
                 icon={<FaCss3 />}
               >
                 <h3
@@ -127,13 +116,44 @@ const Work=()=>{
                 </p>
                 <WebDevlopButton />
               </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2022 - present"
+                iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
+                icon={<FaBook />}
+              >
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ color: "#343148FF" }}
+                >
+                  E-CELL Tech Club
+                </h3>
+                <p style={{ color: "#343148FF" }}>
+                  Core-member of Event and PR Team
+                </p>
+              </VerticalTimelineElement>
+
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2022 - present"
+                iconStyle={{ background: "#D7C49EFF", color: "#343148FF" }}
+                icon={<FaLayerGroup />}
+              >
+                <h3
+                  className="vertical-timeline-element-title"
+                  style={{ color: "#343148FF" }}
+                >
+                  ACM
+                </h3>
+                <p style={{ color: "#343148FF" }}>Member of ACM Family</p>
+              </VerticalTimelineElement>
             </VerticalTimeline>
           </Col>
         </Row>
       </Container>
     </div>
   );
-}
+};
 const ToolUsed=()=>{
   return (
     <div
@@ -173,7 +193,7 @@ const OneStopDownload=()=>{
           title="Download One Stop Intenship Certificate"
         >
           Download
-          <FaCertificate style={{ color: "yellow" }} />
+          <FaDownload style={{ color: "darkblue" }} />
         </Button>
       </a>
     </div>
@@ -199,7 +219,7 @@ const OneStopTraing = () => {
           }}
           title="Download One Stop Project Certificate"
         >
-          Download <FaCertificate style={{ color: "yellow" }} />
+          Download <FaDownload style={{ color: "darkblue" }} />
         </Button>
       </a>
     </div>
@@ -225,7 +245,7 @@ const WebDevlopButton = () => {
           }}
           title="WEb Development Certificate"
         >
-          Download <FaCertificate style={{ color: "yellow" }} />
+          Download <FaDownload style={{ color: "darkblue" }} />
         </Button>
       </a>
     </div>

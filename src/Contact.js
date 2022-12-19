@@ -7,10 +7,48 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { SocialMediaIconsReact } from "social-media-icons-react";
-
+const sendDetail = (data) => {
+  const datastring = `data=${encodeURIComponent(
+    data.Name
+  )},Email=${encodeURIComponent(data.Email)},Message=${encodeURIComponent(
+    data.Message
+  )}`;
+  const promise = new Promise((resolve, reject) => {
+    fetch("/createUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: datastring,
+    })
+      .then((response) => {
+        if (!response.ok) throw Error("Internal Server Error");
+        return response.json;
+      })
+      .then((response) => {
+        resolve(response);
+      })
+      .catch((error) => {
+        reject(error.message);
+      });
+  });
+  return promise;
+};
 const Contact =()=>{
+  const [messageSend,setMessageSend]=React.useState('');
+  function handleData(data){
+    sendDetail(data).then(
+      (resolve) => {
+setMessageSend(true);
+      },
+      (reject) => {
+        setMessageSend(false);
+      }
+    );
+  }
     return (
       <div style={{ background: "#394867", color: "white", padding: "50px" }}>
+        {/* <Work/> */}
         <h2
           style={{
             textAlign: "center",
@@ -27,54 +65,98 @@ const Contact =()=>{
               <LetsTalk />
             </Col>
             <Col className={styles.colContact}>
-              <ContactDetail />
+              <ContactDetail handleData={handleData} messageSend ={messageSend}/>
             </Col>
           </Row>
         </Container>
       </div>
     );
 }
-const ContactDetail=()=>{
-    return (
-      <div>
-        <Form>
-          <Form.Group className="mb-3" controlId="formName">
-            <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder="Please, Enter your Name" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Message</Form.Label>
-            <FloatingLabel controlId="floatingTextarea2" label="Type Here">
-              <Form.Control
-                as="textarea"
-                placeholder="Leave a comment here"
-                style={{ height: "100px" }}
-              />
-            </FloatingLabel>
-          </Form.Group>
-          <br></br>
-          <Button
-            variant="primary"
-            type="submit"
-            style={{
-              background: "#D7C49EFF",
-              color: "black",
-              alignText: "center",
+const ContactDetail = ({handleData,messageSend}) => {
+  const [Name, setName] = React.useState("");
+  const [Email, setEmail] = React.useState("");
+  const [Message, setMessage] = React.useState("");
+  const [ErrorMessage,setErrorMessage]=React.useState('')
+  const clickSubmitHandle = () => {
+    var data = {
+      Name: Name,
+      Email: Email,
+      Message: Message,
+    };
+    if(Name==='' || Email==='' || Message===''){
+      setErrorMessage("Please fill all input");
+return ;
+    }
+    handleData(data);
+    setErrorMessage('');
+    setEmail('')
+    setName('')
+    setMessage('')
+  };
+
+  return (
+    <div>
+      <Form>
+        <Form.Group className="mb-3" controlId="formName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            onChange={(ev) => {
+              setName(ev.target.value);
             }}
-          >
-            Send Message
-          </Button>
-        </Form>
-      </div>
-    );
-}
+            type="text"
+            value={Name}
+            placeholder="Please, Enter your Name"
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            onChange={(ev) => {
+              setEmail(ev.target.value);
+            }}
+            value={Email}
+            placeholder="Enter email"
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Message</Form.Label>
+          <FloatingLabel controlId="floatingTextarea2" label="Type Here">
+            <Form.Control
+              as="textarea"
+              onChange={(ev) => {
+                setMessage(ev.target.value);
+              }}
+              value={Message}
+              placeholder="Leave a comment here"
+              style={{ height: "100px" }}
+            />
+          </FloatingLabel>
+        </Form.Group>
+        <br></br>
+        <Button
+          variant="primary"
+          type="button"
+          style={{
+            background: "#D7C49EFF",
+            color: "black",
+            alignText: "center",
+          }}
+          onClick={clickSubmitHandle}
+        >
+          Send Message
+        </Button>
+        {messageSend && (
+          <p className={styles.messageSend}>{"Message SendSuccessfully"}</p>
+        )}
+        {<p className={styles.messageError}>{ErrorMessage}</p>}
+      </Form>
+    </div>
+  );
+};
 const LetsTalk=()=>{
     return (
       <div>

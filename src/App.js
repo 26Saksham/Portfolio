@@ -3,123 +3,80 @@ import About from './About'
 import styles from './style.module.css';
 import Blog from './Blog'
 import Contact from './Contact'
-import Work from './Work.js'
+
 import Education from './Education.js'
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import backg from "./background.jpg";
+import backg from "./background1.jpg";
 import Resume from './File/saksham.pdf';
 import { SocialMediaIconsReact } from "social-media-icons-react";
 
-import {
-  CNavbar,
-  CContainer,
-  CNavbarToggler,
-  COffcanvas,
-  COffcanvasHeader,
-  COffcanvasTitle,
-  CCloseButton,
-  COffcanvasBody,
-  CNavbarNav,
-  CNavItem,
-  CNavLink,
-  CDropdownMenu,
-  CDropdown,
-  CDropdownToggle,
-  CDropdownItem,
-  CDropdownDivider,
- 
-} from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faHome ,faBook, faLaptopCode, faPhone, faPerson,faProjectDiagram, faArchive, faToolbox} from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@mui/material";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import Work from "./Work";
+import { FaArrowLeft, FaArrowRight, FaLongArrowAltDown, FaLongArrowAltRight, FaLongArrowAltUp } from "react-icons/fa";
 
 
 function App() {
  
-   const [visible, setVisible] = React.useState(false)
+
 return (
-  <div style={{ background: "#14274E" }}>
-    <CNavbar
-      colorScheme="light"
-      className="bg-light"
-      expand="xxl"
-      style={{ padding: "0px" }}
-    >
-      <CContainer
-        fluid
-        style={{
-          background: "#14274e",
-          padding: "5px",
-          color: "rgb(155 199 192)",
-        }}
-      >
-        <log>Saksham Gupta</log>
-        <CNavbarToggler
-          aria-controls="offcanvasNavbar2"
-          aria-label="Toggle navigation"
-          onClick={() => setVisible(!visible)}
-          style={{
-        background: "#ffffff",
-    border: "1px solid #2322b7",
-    "borderRadius": "20px",
-    color: "whitesmoke",
-          }}
-        />
-        <COffcanvas
-          id="offcanvasNavbar2"
-          placement="end"
-          portal={false}
-          visible={visible}
-          onHide={() => setVisible(false)}
-        >
-          <COffcanvasHeader>
-            <COffcanvasTitle>Saksham Gupta</COffcanvasTitle>
-            <CCloseButton
-              className="text-reset"
-              onClick={() => setVisible(false)}
-            />
-          </COffcanvasHeader>
-          <COffcanvasBody>
-            <CNavbarNav>
-              <CNavItem>
-                <CNavLink href="#" to={Contact} active>
-                  Home
-                </CNavLink>
-              </CNavItem>
-              <CNavItem>
-                <CNavLink to="/About"></CNavLink>
-              </CNavItem>
-              <CDropdown variant="nav-item" popper={false}>
-                <CDropdownToggle color="secondary">Work</CDropdownToggle>
-                <CDropdownMenu>
-                  <CDropdownItem href="#">Web - Development</CDropdownItem>
-                  <CDropdownItem href="#">AI-ML</CDropdownItem>
-                  <CDropdownDivider />
-                  <CDropdownItem href="#">Competitive Coding</CDropdownItem>
-                </CDropdownMenu>
-              </CDropdown>
-              <CNavItem>
-                <CNavLink href="#">Contact</CNavLink>
-              </CNavItem>
-            </CNavbarNav>
-          </COffcanvasBody>
-        </COffcanvas>
-      </CContainer>
-    </CNavbar>
-    <Home styles={styles} />
-    <About />
-    <Education />
-    <Work />
-    <Blog />
-    <Contact />
-    <Footer />
+  <div>
+    <div style={{ background: "#14274E" }}>
+      <BrowserRouter>
+        <NavBarItem />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/About" element={<About />} />
+          <Route exact path="/Education" element={<Education />} />
+
+          <Route exact path="/Blog" element={<Blog />} />
+          <Route exact path="/Work" element={<Work />} />
+          <Route exact path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+
+      <Footer />
+    </div>
   </div>
 );
 }
+const NavBarItem = () => {
+  return (
+    <div >
+      <div 
+       
+        className={styles.NavbarDiv}
+      >
+        <Link className={styles.navbaritemHome} to="/">
+          <FontAwesomeIcon icon={faHome} title="home" />
+        </Link>
+        <Link className={styles.navbaritemHome} to="/About">
+          <FontAwesomeIcon icon={faPerson} title="About" />
+        </Link>
+        <Link className={styles.navbaritemHome} to="/Education">
+          <FontAwesomeIcon icon={faBook} title="Education" />
+        </Link>
+
+        <Link className={styles.navbaritemHome} to="/Blog">
+          <FontAwesomeIcon icon={faToolbox} title="Experience" />
+        </Link>
+        <Link className={styles.navbaritemHome} to="/Work">
+          <FontAwesomeIcon icon={faLaptopCode} title="Project" />
+        </Link>
+        <Link className={styles.navbaritemHome} to="/Contact">
+          <FontAwesomeIcon icon={faPhone} title="Contact" />
+        </Link>
+      </div>
+    </div>
+  );
+};
 const Footer=()=>{
+
   return (
     <div
       style={{
@@ -129,31 +86,28 @@ const Footer=()=>{
         color: "#14274E",
       }}
     >
-      <div className={styles.FooterLinkDiv}>
-        <a>Home</a>
-        <a>About</a>
-        <a>Work</a>
-        <a>Contact</a>
-      </div>
+      
+      <div className={styles.FooterLinkDiv}></div>
       <h3 style={{ font: "bold" }}>Saksham Gupta</h3>
       <p style={{ fontSize: "12px", padding: "15px", textAlign: "bottom" }}>
         &copy;copyright by saksham gupta
       </p>
+   
     </div>
   );
 }
-const Home=({styles})=>{
+const Home=()=>{
 return (
   <div
     style={{
       backgroundImage: `url(${backg})`,
       height: "700px",
       backgroundSize: "cover",
-      
     }}
     className={styles.homeBackground}
   >
-    <Container >
+  
+    <Container>
       <Row className={styles.HomeScreenIcon}>
         <Col
           // className={styles.HomeIcon}
@@ -233,7 +187,7 @@ return (
             />
           </span>
         </Col>
-        <Col>
+        <Col className={styles.ResumeButtonDiv}>
           <ResumeButton />
         </Col>
       </Row>
@@ -262,12 +216,8 @@ const ResumeButton=()=>{
           Download CV
         </Button>
       </a>
-      <a
-        style={{ textDecoration: "none" }}
-        href={Resume}
-        download="Saksham Resume"
-        target="_blank"
-      >
+
+      <Link className={styles.navbaritemHome} to="/Contact">
         <Button
           style={{
             border: "1px solid",
@@ -275,15 +225,17 @@ const ResumeButton=()=>{
             // borderBottomLeftRadius: "11px",
             borderBottomStyle: "groove",
             padding: "15px",
-            backgroundColor: "rgb(20 39 78)",
+            backgroundColor: "rgb(155 164 180)",
           }}
           className={styles.letsTalkButton}
         >
           Let's Talk
         </Button>
-      </a>
+      </Link>
       <span className={styles.scrollText}>
-        SCROLL TO DOWN <FontAwesomeIcon icon={faArrowRight} />
+        <Link className={styles.navbaritemHome} to="/Contact">
+          <FaLongArrowAltUp />
+        </Link>
       </span>
     </div>
   );

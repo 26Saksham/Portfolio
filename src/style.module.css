@@ -91,7 +91,15 @@ background-color: "#D8D8D8";
     animation-name:example;
     animation-duration:3s;
     position: relative;
+    /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.3px);
+        -webkit-backdrop-filter: blur(1.3px);
+        border: 1px solid rgba(255, 255, 255, 0.19);
 }
+
 @keyframes example {
     0%{
    
@@ -239,6 +247,7 @@ font-weight: bolder;
    .colContact{
     position: relative;
    top: 3rem;
+   
    }
    .SocialIcons{
     background-color: #D8D8D8;
@@ -493,47 +502,7 @@ padding: 10px;
 
     }
 }
-@media screen and (max-width: 1000px) {
-.navbaritemHome{
-    font-size: large;
-}
-.NavbarDiv{
-    left:25%;
 
-}
-}
-@media screen and (max-width: 832px) {
-.navbaritemHome {
-        font-size:medium;
-    }
-    .NavbarDiv{
-            position: fixed;
-                border: 1px solid;
-                bottom: 12%;
-                padding: 17px;
-                border-radius: 1000px;
-                backdrop-filter: blur(20px);
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .navbaritemHome {
-        font-size: smaller;
-       margin: 8px;
-       padding: 4px;
-    }
-                 .NavbarDiv {
-                     position: fixed;
-                     border: 1px solid;
-                     bottom: 4%;
-                     justify-content: center;
-                     padding: 17px;
-                    width: 80%;
-                     border-radius: 1000px;
-                     backdrop-filter: blur(20px);
-                     left: 8%;
-                 }
-}
 
 /* here */
 
@@ -566,10 +535,55 @@ background: transparent;
         top: inherit;
         top: -30px;
 }
+@media screen and (max-width: 1000px) {
+    .navbaritemHome {
+        font-size: large;
+    }
+
+    .NavbarDiv {
+        left: 25%;
+
+    }
+}
+
+@media screen and (max-width: 832px) {
+    .navbaritemHome {
+        font-size: medium;
+    }
+
+    .NavbarDiv {
+        position: fixed;
+        border: 1px solid;
+        bottom: 12%;
+        padding: 17px;
+        border-radius: 1000px;
+        backdrop-filter: blur(20px);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbaritemHome {
+        font-size: smaller;
+        margin: 8px;
+        padding: 4px;
+    }
+
+    .NavbarDiv {
+        position: fixed;
+        border: 1px solid;
+        bottom: 4%;
+        justify-content: center;
+        padding: 17px;
+        width: 80%;
+        border-radius: 1000px;
+        backdrop-filter: blur(20px);
+        left: 4%;
+    }
+}
 @media screen and (max-width: 457px) {
     .navbaritemHome {
         font-size: smaller;
-        margin: 6px;
+        margin: 4px;
         padding: 0px;
     }
 
@@ -586,3 +600,40 @@ left:5ch;
 
     }
 }
+@media screen and (max-width: 420px) {
+    .navbaritemHome {
+        font-size: smaller;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .NavbarDiv {
+        position: fixed;
+        left: 1ch;
+        border: 1px solid;
+        bottom: 4%;
+        justify-content: center;
+        padding: 17px;
+        width: 66%;
+        border-radius: 1000px;
+        backdrop-filter: blur(20px);
+
+    }
+}
+@media screen and (max-width: 410px) 
+{
+       .NavbarDiv {
+position: fixed;
+    left: 1ch;
+    border: 1px solid;
+    bottom: 4%;
+    justify-content: center;
+    padding: 11px;
+    width: 72%;
+    left: 16%;
+    border-radius: 1000px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+       }
+}
+
